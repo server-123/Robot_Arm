@@ -5,4 +5,4 @@ Reference : https://zeta7.notion.site/zeta7/JessiArm-be431f54912b472fb7f8977e549
 Connect four servo motors.
 ## Software
 ### Jetpack & ROS install
-Reference : https://github.com/server-123/AI_RC, Jetpack & ROS install
+Reference : https://github.com/server-123/AI_RC, "Jetpack & ROS install"
