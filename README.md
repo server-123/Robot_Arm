@@ -36,13 +36,57 @@ cma
 ```
 roslaunch jessiarm_control teleop_keyboard.launch
 ```
-j l: Robot Arm Left, Right  
+j l : Robot Arm Left, Right  
 i , : motor1  
 o . : motor2  
 u m : motor3  
-t b: gripper close, open
+t b : gripper close, open
 
 ```
 rqt_graph
 ```
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/8c05987b-0f0b-4cc8-be66-ac7518fdfded)
+### Automatic Move
+Copy the automove.txt file.
+```
+cp ~/.ros/automove.txt ~/catkin_ws/src/jessiarm/jessiarm_control/src
+cp ~/.ros/automove.txt ~/catkin_ws
+```
+Run the auto_move.py file.
+```
+cd catkin_ws
+python src/jessiarm/jessiarm_control/src/auto_move.py
+```
+According to automove.txt file, the robot arm moves.
+After it sleeps according to the variable written at the end, it excutes "while loop"
+### Verify USB camera
+```
+ls /dev/video0*
+nvgstcapture-1.0 --camsrc=0 --cap-dev-node=/dev/video0
+```
+### Blob Pick and Place
+```
+roslaunch jessiarm_control blob_control.launch
+```
+find_ball.yaml
+```
+define: &blue_min [55,40,0]
+define: &blue_max [150, 255, 255]
+define: &white_min [16, 0, 66]
+define: &white_max [133, 251, 255]
+define: &pink_min [135, 41, 95]
+define: &pink_max [255, 196, 255]
+define: &green_min [39, 81, 71]
+define: &green_max [75, 255, 255]
+define: &orange_min [7, 109, 50]
+define: &orange_max [76, 218, 234]
+define: &red_min [0, 94, 92]
+define: &red_max [255, 255, 255]
+
+#Chose the filter.
+blob_detector:
+  blob_min: *green_min
+  blob_max: *green_max
+```
+![image](https://github.com/server-123/Robot_Arm/assets/73692229/0505243d-d113-4c45-ba93-5062990fb308)
+### Yolo4 Pick and Place
