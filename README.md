@@ -88,5 +88,8 @@ blob_detector:
   blob_min: *green_min
   blob_max: *green_max
 ```
+```
+rqt_graph
+```
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/0505243d-d113-4c45-ba93-5062990fb308)
 ### Yolo4 Pick and Place
