@@ -60,6 +60,19 @@ cd ~/catkin_ws
 python src/jessiarm/jessiarm_control/src/servokit_test.py
 ```
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/7f9341c7-48f3-4a6e-8324-f79089081031)
+**PWM(Pulse Width Modulation)**: The PWM signal represents the percentage of time the signal is in the ON state within the period (T). This signal allows you to generate a signal that corresponds to the analog value you want to represent on average.  
+  
+Power(Positive): A line for power supply  
+Ground(Negative): A line indicating the grounding of the power supply  
+Control: A line used to control the angle of the servo motor  
+  
+The servo motor rotates in response to the PWM signal received from the control line.  
+The pulse width of the PWM signal (when the waveform is high) controls the movement of the servo motor.  
+Typically, the greater the pulse width, the greater the angle the servo motor rotates.  
+It usually uses a PWM signal with a period of 20 ms.
+If the pulse width is 1 ms, the servo motor rotates at the minimum angle, and if the pulse width is 2 ms, it rotates at the maximum angle.
+
+* Since the range of pulse width used to control the operation of the servo motor is determined according to a specific standard, a pulse width of 1 ms to 2 ms is used.
 ### Control by Keyboard
 ```
 cd ~/catkin_ws
