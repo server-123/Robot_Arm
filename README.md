@@ -160,7 +160,7 @@ cd ~/catkin_ws
 cma
 ```
 ### Run the Darknet_ros
-It consists of two **"launch"** files.
+It consists of two **"launch"** files.  
 **Operation Order**
 1. camera publish
 2. yolo running
