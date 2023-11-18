@@ -173,17 +173,17 @@ roslaunch darknet_ros yolo_v4.launch
 roslaunch jessiarm_control yolo_chase.launch
 ```
 The **"yolo_chase.launch"** file reads the Variables in the **"yolo_jessiarm.yaml"** file.
-```
-rqt_image_view
-```
-![image](https://github.com/server-123/Robot_Arm/assets/73692229/7343795d-d352-4c9a-9b4c-b6275b546f4c)
-
+  
 Modify the topic to subscribe to to use the USB camera.
 ```
 camera_reading:
   topic: /webcam_image
 ```
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/4b945d30-3e46-4bac-bb43-cbaeccdd1c03)
+```
+rqt_image_view
+```
+![image](https://github.com/server-123/Robot_Arm/assets/73692229/7343795d-d352-4c9a-9b4c-b6275b546f4c)
 ```
 rqt_graph
 ```
