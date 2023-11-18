@@ -1,11 +1,35 @@
 # Robot_Arm
-Reference : https://zeta7.notion.site/zeta7/JessiArm-be431f54912b472fb7f8977e5499612d
+Reference: https://zeta7.notion.site/zeta7/JessiArm-be431f54912b472fb7f8977e5499612d
+## ROS(Robot Operating System)
+It is an open source robot operating system for robot operation.  
+It provides a wealth of tools and libraries for developing and running various robots and robot applications.  
+  
+Modularity and transparency: ROS is modular, consisting of multiple nodes, and nodes can communicate transparently with each other.  
+Message communication: Nodes communicate using message types defined in ROS. This makes it easier to exchange data.  
+Package Systems: ROS uses a package system to organize and share code, compiled executable files, data, libraries, and more.  
+Simulation and visualization: The abundance of tools to simulate and visualize robots makes development and testing easier.  
+  
+Topic: "Topic" is the mechanisms by which messages are exchanged between nodes. "Publish" a message about a particular topic, and another node "subscribes" to that topic to receive the message. Topics support asynchronous communication, and nodes perform specific functions by subscribing only to topics they are interested in.  
+Service: "Service" is a synchronous communication mechanism consisting of "request" and "response". When a client node requests a service, the server node responds. The service is usually used when one-off work is required.  
+Action: Similar to the "service", but used for long-running tasks. Clients send goals, and servers send interim results periodically until the task is complete.  
+  
+rqt_graph: As one of the GUI tools provided by ROS, it is a tool that visually displays graphs between nodes and topics in the currently running ROS system. This makes it easy to understand and debug the ROS system's "topic subscription" and "publication" relationships, and connections between nodes.
+## YOLO(You Only Look Once)
+
+## Darknet_ros
+Darknet_ros is a ROS package for integrating the Darknet framework with the ROS.  
+This package uses Darknet to perform real-time object detection, publishing the results as ROS messages, and communicating with other ROS nodes.  
+  
+Real-time Object Detection: Use the "YOLO" algorithm to detect multiple objects in real time.  
+Integration with ROS: Convert Darknet results to ROS messages and communicate with other ROS nodes through ROS topics.  
+Set parameters: The user can set the desired object detection behavior by adjusting the parameters in darknet_ros.  
+Visualization: Supports RViz messages for visualizing results.
 ## Hardware (A Circuit Diagram)
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/263003c9-ebbb-4816-bfb2-d8b9b06ef14e)
 Connect four servo motors.
 ## Software
 ### Jetpack & ROS install
-Reference : https://github.com/server-123/AI_RC, "Jetpack & ROS install"
+Reference: https://github.com/server-123/AI_RC, "Jetpack & ROS install"
 ### Jessiarm install
 ```
 cd ~/catkin_ws/src
