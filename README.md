@@ -82,7 +82,7 @@ Run the **"auto_move.py"** file.
 cd catkin_ws
 python src/jessiarm/jessiarm_control/src/auto_move.py
 ```
-According to "automove.txt" file, the robot arm moves.
+According to **"automove.txt"** file, the robot arm moves.
 After it sleeps according to the variable written at the end, it excutes "while loop"
 ### Verify USB camera
 ```
