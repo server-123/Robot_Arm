@@ -19,10 +19,10 @@ YOLO is deep learning algorithm for Object Detection.
 It divides images into several grids with only one forward pass and predicts bounding boxes and class probabilities for objects in each grid.  
 It is effectively used for real-time object detection.  
   
-Real-time processing: It can perform object detection with only one forward pass, so it can be executed in real time.  
-Grid Systems: It divides images into grids and predict which objects each grid cell belongs to.  
-Various Object Detection: You can detect bounding boxes and classes for multiple objects in one image.  
-Minimize duplicate detection of objects: When an object spans multiple grid cells, It creates only one bounding box to minimize duplicate detection.
+**Real-time processing**: It can perform object detection with only one forward pass, so it can be executed in real time.  
+**Grid Systems**: It divides images into grids and predict which objects each grid cell belongs to.  
+**Various Object Detection**: You can detect bounding boxes and classes for multiple objects in one image.  
+**Minimize duplicate detection of objects**: When an object spans multiple grid cells, It creates only one bounding box to minimize duplicate detection.
 ## Darknet_ros
 Darknet_ros is a ROS package for integrating the Darknet framework with the ROS.  
 This package uses Darknet to perform real-time object detection, publishing the results as ROS messages, and communicating with other ROS nodes.  
