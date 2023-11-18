@@ -1,4 +1,4 @@
-# Robot_Arm
+![image](https://github.com/server-123/Robot_Arm/assets/73692229/4dad27f3-9f03-453b-87ec-32882c69eb31)# Robot_Arm
 **Reference**: https://zeta7.notion.site/zeta7/JessiArm-be431f54912b472fb7f8977e5499612d
 ## ROS(Robot Operating System)
 ROS is an open source robot operating system for robot operation.  
@@ -172,8 +172,12 @@ roslaunch darknet_ros yolo_v4.launch
 # terminal 2, camera publish, object x/y -> robot move
 roslaunch jessiarm_control yolo_chase.launch
 ```
-The **"yolo_chase.launch"** file reads the Variables in the **"yolo_jessiarm.yaml"** file.  
-  
+The **"yolo_chase.launch"** file reads the Variables in the **"yolo_jessiarm.yaml"** file.
+```
+rqt_image_view
+```
+![image](https://github.com/server-123/Robot_Arm/assets/73692229/7343795d-d352-4c9a-9b4c-b6275b546f4c)
+
 Modify the topic to subscribe to to use the USB camera.
 ```
 camera_reading:
