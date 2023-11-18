@@ -32,7 +32,7 @@ This package uses Darknet to perform real-time object detection, publishing the 
 **Set parameters**: The user can set the desired object detection behavior by adjusting the parameters in darknet_ros.  
 **Visualization**: It supports RViz(Robot Visualization) messages for visualizing results.
 
-* RViz: It is used to visually represent robot and sensor data.
+** RViz: It is used to visually represent robot and sensor data.
 ## Hardware (A Circuit Diagram)
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/263003c9-ebbb-4816-bfb2-d8b9b06ef14e)
 Connect four servo motors.
@@ -72,7 +72,7 @@ Typically, the greater the pulse width, the greater the angle the servo motor ro
 It usually uses a PWM signal with a period of 20 ms.
 If the pulse width is 1 ms, the servo motor rotates at the minimum angle, and if the pulse width is 2 ms, it rotates at the maximum angle.
 
-* Since the range of pulse width used to control the operation of the servo motor is determined according to a specific standard, a pulse width of 1 ms to 2 ms is used.
+** Since the range of pulse width used to control the operation of the servo motor is determined according to a specific standard, a pulse width of 1 ms to 2 ms is used.
 ### Control by Keyboard
 ```
 cd ~/catkin_ws
