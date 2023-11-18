@@ -11,6 +11,7 @@ Reference : https://github.com/server-123/AI_RC, "Jetpack & ROS install"
 cd ~/catkin_ws/src
 git clone https://github.com/zeta0707/jessiarm.git
 
+# The patch for the "/opt/ros/melodic/share/cv_bridge/cmake/cv_bridgeConfig.cmake" file is read from the "cv_bridge.patch" file and applied.
 cd ~/Downloads/opencvDownTo34
 sudo patch -p1 /opt/ros/melodic/share/cv_bridge/cmake/cv_bridgeConfig.cmake -p1 < cv_brige.patch
 cd ~/catkin_ws
@@ -47,17 +48,17 @@ rqt_graph
 ```
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/8c05987b-0f0b-4cc8-be66-ac7518fdfded)
 ### Automatic Move
-Copy the automove.txt file.
+Copy the "automove.txt" file.
 ```
 cp ~/.ros/automove.txt ~/catkin_ws/src/jessiarm/jessiarm_control/src
 cp ~/.ros/automove.txt ~/catkin_ws
 ```
-Run the auto_move.py file.
+Run the "auto_move.py" file.
 ```
 cd catkin_ws
 python src/jessiarm/jessiarm_control/src/auto_move.py
 ```
-According to automove.txt file, the robot arm moves.
+According to "automove.txt" file, the robot arm moves.
 After it sleeps according to the variable written at the end, it excutes "while loop"
 ### Verify USB camera
 ```
@@ -68,8 +69,9 @@ nvgstcapture-1.0 --camsrc=0 --cap-dev-node=/dev/video0
 ```
 roslaunch jessiarm_control blob_control.launch
 ```
-The content of 'find_ball.yaml'
+The content of "find_ball.yaml" file
 ```
+# Predefined filter values
 define: &blue_min [55,40,0]
 define: &blue_max [150, 255, 255]
 define: &white_min [16, 0, 66]
@@ -83,7 +85,7 @@ define: &orange_max [76, 218, 234]
 define: &red_min [0, 94, 92]
 define: &red_max [255, 255, 255]
 
-#Chose the filter.
+# Chose the filter.
 blob_detector:
   blob_min: *green_min
   blob_max: *green_max
