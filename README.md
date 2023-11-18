@@ -1,4 +1,4 @@
-![image](https://github.com/server-123/Robot_Arm/assets/73692229/4dad27f3-9f03-453b-87ec-32882c69eb31)# Robot_Arm
+# Robot_Arm
 **Reference**: https://zeta7.notion.site/zeta7/JessiArm-be431f54912b472fb7f8977e5499612d
 ## ROS(Robot Operating System)
 ROS is an open source robot operating system for robot operation.  
