@@ -4,9 +4,9 @@
 ROS is an open source robot operating system for robot operation.  
 It provides a wealth of tools and libraries for developing and running various robots and robot applications.  
   
-**Modularity and transparency**: ROS is modular, consisting of multiple nodes, and nodes can communicate transparently with each other.  
+**Modularity and transparency**: It is modular, consisting of multiple nodes, and nodes can communicate transparently with each other.  
 **Message communication**: Nodes communicate using message types defined in ROS. This makes it easier to exchange data.  
-**Package Systems**: ROS uses a package system to organize and share code, compiled executable files, data, libraries, and more.  
+**Package Systems**: It uses a package system to organize and share code, compiled executable files, data, libraries, and more.  
 **Simulation and visualization**: The abundance of tools to simulate and visualize robots makes development and testing easier.  
   
 **Topic**: "Topic" is the mechanisms by which messages are exchanged between nodes. "Publish" a message about a particular topic, and another node "subscribes" to that topic to receive the message. Topics support asynchronous communication, and nodes perform specific functions by subscribing only to topics they are interested in.  
@@ -15,23 +15,22 @@ It provides a wealth of tools and libraries for developing and running various r
   
 **rqt_graph**: As one of the GUI tools provided by ROS, it is a tool that visually displays graphs between nodes and topics in the currently running ROS system. This makes it easy to understand and debug the ROS system's "topic subscription" and "publication" relationships, and connections between nodes.
 ## YOLO(You Only Look Once)
-객체 감지(Object Detection)를 위한 딥러닝 알고리즘입니다.  
-YOLO는 한 번의 순전파(Forward Pass)만으로 이미지를 여러 그리드로 나누고, 각 그리드에 속한 객체들의 바운딩 박스와 클래스 확률을 예측합니다. 이러한 특징 때문에 YOLO는 실시간 객체 감지에 효과적으로 사용됩니다.  
+YOLO is deep learning algorithm for Object Detection.  
+It divides images into several grids with only one forward pass and predicts bounding boxes and class probabilities for objects in each grid.  
+It is effectively used for real-time object detection.  
   
-실시간 처리: YOLO는 한 번의 전방향 패스만으로 객체 감지를 수행하므로 실시간으로 실행 가능합니다.  
-그리드 시스템: 이미지를 그리드로 나누고, 각 그리드 셀이 해당 영역에 속한 객체를 예측합니다.  
-다양한 객체 탐지: 한 이미지에서 여러 객체의 바운딩 박스와 클래스를 감지할 수 있습니다.  
-객체의 중복 감지 최소화: 객체가 여러 그리드 셀에 걸칠 경우, YOLO는 하나의 바운딩 박스만 생성하여 중복된 감지를 최소화합니다.  
-다양한 크기의 객체 처리: YOLO는 다양한 크기의 객체를 처리할 수 있습니다.
-=
+Real-time processing: It can perform object detection with only one forward pass, so it can be executed in real time.  
+Grid Systems: It divides images into grids and predict which objects each grid cell belongs to.  
+Various Object Detection: You can detect bounding boxes and classes for multiple objects in one image.  
+Minimize duplicate detection of objects: When an object spans multiple grid cells, It creates only one bounding box to minimize duplicate detection.
 ## Darknet_ros
 Darknet_ros is a ROS package for integrating the Darknet framework with the ROS.  
 This package uses Darknet to perform real-time object detection, publishing the results as ROS messages, and communicating with other ROS nodes.  
   
-**Real-time Object Detection**: Use the "YOLO" algorithm to detect multiple objects in real time.  
-**Integration with ROS**: Convert Darknet results to ROS messages and communicate with other ROS nodes through ROS topics.  
+**Real-time Object Detection**: It uses the "YOLO" algorithm to detect multiple objects in real time.  
+**Integration with ROS**: It converts Darknet results to ROS messages and communicate with other ROS nodes through ROS topics.  
 **Set parameters**: The user can set the desired object detection behavior by adjusting the parameters in darknet_ros.  
-**Visualization**: Supports RViz(Robot Visualization) messages for visualizing results.
+**Visualization**: It supports RViz(Robot Visualization) messages for visualizing results.
 
 * RViz: It is used to visually represent robot and sensor data.
 ## Hardware (A Circuit Diagram)
