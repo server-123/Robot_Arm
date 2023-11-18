@@ -1,4 +1,4 @@
-# Robot_Arm
+![image](https://github.com/server-123/Robot_Arm/assets/73692229/1a7f655d-29d5-493b-89c6-a89728ebfc95)# Robot_Arm
 **Reference**: https://zeta7.notion.site/zeta7/JessiArm-be431f54912b472fb7f8977e5499612d
 ## ROS(Robot Operating System)
 ROS is an open source robot operating system for robot operation.  
@@ -104,7 +104,7 @@ Run the **"auto_move.py"** file.
 cd catkin_ws
 python src/jessiarm/jessiarm_control/src/auto_move.py
 ```
-According to **"automove.txt"** file, the robot arm moves.
+According to the **"automove.txt"** file, the robot arm moves.
 After it sleeps according to the variable written at the end, it excutes "while loop"
 ## Verify USB camera
 ```
@@ -115,7 +115,7 @@ nvgstcapture-1.0 --camsrc=0 --cap-dev-node=/dev/video0
 ```
 roslaunch jessiarm_control blob_control.launch
 ```
-The content of **"find_ball.yaml"** file
+The content of the **"find_ball.yaml"** file
 ```
 # Predefined filter values
 define: &blue_min [55,40,0]
@@ -141,3 +141,46 @@ rqt_graph
 ```
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/0505243d-d113-4c45-ba93-5062990fb308)
 ## Yolo4 Pick and Place
+### Install Darknet_ros
+```
+sudo apt-get install -y ros-melodic-image-pipeline
+
+cd ~/catkin_ws/src
+git clone --recursive https://github.com/Tossy0423/yolov4-for-darknet_ros.git
+```
+### Darknet_ros Modification
+Modify "yolov4" to "yolov4-tiny" and apply "config" and "weights" corresponding to "custom dataset".
+```
+cd ~/catkin_ws/src/yolov4-for-darknet_ros/darknet_ros
+git clone https://github.com/zeta0707/darknet_ros_custom.git
+cp -rf darknet_ros_custom/* darknet_ros/
+```
+```
+cd ~/catkin_ws
+cma
+```
+### Run the Darknet_ros
+It consists of two **"launch"** files.
+**Operation Order**
+1. camera publish
+2. yolo running
+3. object x, y → robot move
+```
+# terminal 1, object detect using Yolo_v4
+roslaunch darknet_ros yolo_v4.launch
+
+# terminal 2, camera publish, object x/y -> robot move
+roslaunch jessiarm_control yolo_chase.launch
+```
+The **"yolo_chase.launch"** file reads the Variables in the **"yolo_jessiarm.yaml"** file.  
+  
+Modify the topic to subscribe to to use the USB camera.
+```
+camera_reading:
+  topic: /webcam_image
+```
+![image](https://github.com/server-123/Robot_Arm/assets/73692229/4b945d30-3e46-4bac-bb43-cbaeccdd1c03)
+```
+rqt_graph
+```
+![image](https://github.com/server-123/Robot_Arm/assets/73692229/360af69f-807c-4b7f-aeb8-45f3ce0f7e90)
