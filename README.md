@@ -33,13 +33,13 @@ This package uses Darknet to perform real-time object detection, publishing the 
 **Visualization**: It supports RViz(Robot Visualization) messages for visualizing results.
 
 *RViz: It is used to visually represent robot and sensor data.
-## Hardware (A Circuit Diagram)
+# Hardware (A Circuit Diagram)
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/263003c9-ebbb-4816-bfb2-d8b9b06ef14e)
 Connect four servo motors.
-## Software
-### Jetpack & ROS install
+# Software
+## Jetpack & ROS install
 **Reference**: https://github.com/server-123/AI_RC, **"Jetpack & ROS install"**
-### Jessiarm install
+## Jessiarm install
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/zeta0707/jessiarm.git
@@ -51,7 +51,7 @@ cd ~/catkin_ws
 
 cma
 ```
-### Test Servo Motor
+## Test Servo Motor
 ```
 sudo apt install python-pip -y
 pip2 install adafruit_pca9685
@@ -73,7 +73,7 @@ It usually uses a PWM signal with a period of 20 ms.
 If the pulse width is 1 ms, the servo motor rotates at the minimum angle, and if the pulse width is 2 ms, it rotates at the maximum angle.
 
 *Since the range of pulse width used to control the operation of the servo motor is determined according to a specific standard, a pulse width of 1 ms to 2 ms is used.
-### Control by Keyboard
+## Control by Keyboard
 ```
 cd ~/catkin_ws
 git clone https://github.com/ros-teleop/teleop_twist_keyboard.git
@@ -93,7 +93,7 @@ t b : gripper close, open
 rqt_graph
 ```
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/8c05987b-0f0b-4cc8-be66-ac7518fdfded)
-### Automatic Move
+## Automatic Move
 Copy the **"automove.txt"** file.
 ```
 cp ~/.ros/automove.txt ~/catkin_ws/src/jessiarm/jessiarm_control/src
@@ -106,12 +106,12 @@ python src/jessiarm/jessiarm_control/src/auto_move.py
 ```
 According to **"automove.txt"** file, the robot arm moves.
 After it sleeps according to the variable written at the end, it excutes "while loop"
-### Verify USB camera
+## Verify USB camera
 ```
 ls /dev/video0*
 nvgstcapture-1.0 --camsrc=0 --cap-dev-node=/dev/video0
 ```
-### Blob Pick and Place
+## Blob Pick and Place
 ```
 roslaunch jessiarm_control blob_control.launch
 ```
@@ -140,4 +140,4 @@ blob_detector:
 rqt_graph
 ```
 ![image](https://github.com/server-123/Robot_Arm/assets/73692229/0505243d-d113-4c45-ba93-5062990fb308)
-### Yolo4 Pick and Place
+## Yolo4 Pick and Place
