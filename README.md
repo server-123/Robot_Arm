@@ -68,7 +68,7 @@ nvgstcapture-1.0 --camsrc=0 --cap-dev-node=/dev/video0
 ```
 roslaunch jessiarm_control blob_control.launch
 ```
-find_ball.yaml
+The content of 'find_ball.yaml'
 ```
 define: &blue_min [55,40,0]
 define: &blue_max [150, 255, 255]
