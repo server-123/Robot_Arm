@@ -1,7 +1,7 @@
 # Robot_Arm
 **Reference**: https://zeta7.notion.site/zeta7/JessiArm-be431f54912b472fb7f8977e5499612d
 ## ROS(Robot Operating System)
-ROS is an open source robot operating system for robot operation.  
+A ROS is an open source robot operating system for robot operation.  
 It provides a wealth of tools and libraries for developing and running various robots and robot applications.  
   
 **Modularity and transparency**: It is modular, consisting of multiple nodes, and nodes can communicate transparently with each other.  
